@@ -26,7 +26,9 @@ By connecting model-driven red teaming with claim-level evidence and privacy-awa
 - **Flexible inference modes:** Use Groq (`live_llm`), Ollama (`local_llm`), or deterministic offline execution (`mock_llm`).
 
 Agent review is model adjudication against supplied cases—not execution of tests, proof of correctness, or automatic modification of a deployed agent.
-
+<p align="center">
+  <img src="assets/" alt="NEMESIS dashboard preview" width="1200" />
+</p>
 ## Tech stack
 
 | Capability | Technology |
