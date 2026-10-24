@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">NEMESIS project dashboard preview</title>
+  <desc id="desc">A stylized dashboard showing the NEMESIS system integrity view.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#dfece7"/>
+      <stop offset="100%" stop-color="#d9e7e0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#c6d8d1" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="980" fill="url(#bg)"/>
+  <g opacity="0.15" stroke="#9bb8b2" stroke-width="1">
+    <path d="M0 113H1600M0 220H1600M0 327H1600M0 434H1600M0 541H1600M0 648H1600M0 755H1600M0 862H1600"/>
+    <path d="M176 0V980M360 0V980M544 0V980M728 0V980M912 0V980M1096 0V980M1280 0V980M1464 0V980"/>
+  </g>
+
+  <g>
+    <rect x="0" y="0" width="1600" height="96" fill="#f5f8f6"/>
+    <rect x="0" y="95" width="1600" height="1" fill="#dfe7e2"/>
+
+    <g transform="translate(42,22)">
+      <rect x="0" y="0" width="34" height="34" rx="8" fill="#1f2937"/>
+      <path d="M10 20c2-8 7-12 17-12 6 0 11 2 15 7l-6 2c-2-2-5-3-9-3-4 0-7 2-8 7l-9 1zm9 9c3 0 6-2 8-6l10 3c-1 6-5 10-12 10-7 0-11-5-11-12 0-1 0-3 1-4l8 2c2 0 5 2 6 7h10c-1 8-7 14-17 14-10 0-17-7-17-18 0-9 6-16 15-17l8 2c-2 2-3 5-3 8 0 6 4 10 10 11z" fill="#f5f8f6"/>
+      <text x="48" y="25" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700" fill="#1c2530">NEMESIS</text>
+      <text x="182" y="25" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#7b8b88" letter-spacing="2" font-weight="600">AI RELIABILITY</text>
+      <text x="182" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#7b8b88">Agent integrity console</text>
+    </g>
+
+    <g transform="translate(1080,20)">
+      <g transform="translate(0,0)">
+        <circle cx="11" cy="11" r="5" fill="#5cc1a8"/>
+        <rect x="22" y="5" width="94" height="12" rx="6" fill="#ffffff" stroke="#d6dfdb"/>
+        <text x="33" y="14" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#0f172a">Pipeline complete</text>
+      </g>
+      <g transform="translate(140,0)">
+        <rect x="0" y="0" width="116" height="34" rx="10" fill="#ffffff" stroke="#bdd5ce"/>
+        <path d="M20 17h8M24 13v8M35 13l9 9m0-9l-9 9" stroke="#1b2c2a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <text x="52" y="22" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1f2937">Run Pipeline</text>
+      </g>
+      <g transform="translate(280,0)">
+        <rect x="0" y="0" width="110" height="34" rx="10" fill="#ffffff" stroke="#bdd5ce"/>
+        <circle cx="20" cy="17" r="6" fill="#dce7e2" stroke="#7b8b88"/>
+        <text x="36" y="22" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#40535a">Cloud</text>
+      </g>
+      <g transform="translate(410,0)">
+        <rect x="0" y="0" width="120" height="34" rx="10" fill="#ffffff" stroke="#bdd5ce"/>
+        <circle cx="20" cy="17" r="6" fill="#dce7e2" stroke="#7b8b88"/>
+        <text x="36" y="22" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#40535a">Local Ollama</text>
+      </g>
+    </g>
+  </g>
+
+  <g>
+    <text x="96" y="262" font-family="Georgia, 'Times New Roman', serif" font-size="104" fill="#1f2a2f" font-weight="700">System integrity</text>
+    <text x="96" y="334" font-family="Segoe UI, Arial, sans-serif" font-size="32" fill="#465d5a">Monitor, trace, and resolve unreliable AI behavior in real time.</text>
+
+    <g transform="translate(1185,155)">
+      <rect x="0" y="0" width="308" height="54" rx="22" fill="#1f2937"/>
+      <circle cx="26" cy="27" r="10" fill="#10b981"/>
+      <text x="46" y="33" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#e6edf0">All systems operational</text>
+      <text x="226" y="33" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#a9b5b1">Updated 09:24 AM</text>
+    </g>
+
+    <text x="96" y="430" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#5f7b76" letter-spacing="2.8">RUN OVERVIEW / 10/24/2026, 9:24:40 AM</text>
+
+    <g transform="translate(96,470)">
+      <text x="0" y="18" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#243133">Pipeline summary</text>
+      <text x="268" y="18" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#5f7b76">booking • 22e3cb29</text>
+      <g transform="translate(790,0)">
+        <rect x="0" y="-12" width="116" height="30" rx="15" fill="#f8fbfa" stroke="#cfe0db"/>
+        <text x="26" y="10" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#47615a">Run history</text>
+      </g>
+    </g>
+
+    <g transform="translate(96,560)">
+      <g filter="url(#shadow)">
+        <rect x="0" y="0" width="292" height="182" rx="18" fill="#f5f7f6" stroke="#d9e4df"/>
+        <text x="24" y="36" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#47615a">Scenarios generated</text>
+        <text x="24" y="120" font-family="Georgia, 'Times New Roman', serif" font-size="62" fill="#1d2d32">4</text>
+        <text x="24" y="155" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#5a7a75">adversarial inputs</text>
+      </g>
+      <g transform="translate(322,0)" filter="url(#shadow)">
+        <rect x="0" y="0" width="292" height="182" rx="18" fill="#f5f7f6" stroke="#d9e4df"/>
+        <text x="24" y="36" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#47615a">Failures discovered</text>
+        <text x="24" y="120" font-family="Georgia, 'Times New Roman', serif" font-size="62" fill="#1d2d32">3</text>
+        <text x="24" y="155" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#5a7a75">detected by checker</text>
+      </g>
+      <g transform="translate(644,0)" filter="url(#shadow)">
+        <rect x="0" y="0" width="292" height="182" rx="18" fill="#f1e1bc" stroke="#dfc88a"/>
+        <text x="24" y="36" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#6b5841">False issues claims</text>
+        <text x="24" y="120" font-family="Georgia, 'Times New Roman', serif" font-size="62" fill="#1d2d32">2</text>
+        <text x="24" y="155" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#6d5a47">agent reported success</text>
+      </g>
+      <g transform="translate(966,0)" filter="url(#shadow)">
+        <rect x="0" y="0" width="292" height="182" rx="18" fill="#f5f7f6" stroke="#d9e4df"/>
+        <text x="24" y="36" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#47615a">Scenarios minimized</text>
+        <text x="24" y="120" font-family="Georgia, 'Times New Roman', serif" font-size="62" fill="#1d2d32">3</text>
+        <text x="24" y="155" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#5a7a75">reproducible cases</text>
+      </g>
+    </g>
+
+    <g transform="translate(96,770)">
+      <g filter="url(#shadow)">
+        <rect x="0" y="0" width="292" height="182" rx="18" fill="#f5f7f6" stroke="#d9e4df"/>
+        <text x="24" y="36" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#47615a">Tests generated</text>
+        <text x="24" y="120" font-family="Georgia, 'Times New Roman', serif" font-size="62" fill="#1d2d32">3</text>
+      </g>
+      <g transform="translate(322,0)" filter="url(#shadow)">
+        <rect x="0" y="0" width="292" height="182" rx="18" fill="#f5f7f6" stroke="#d9e4df"/>
+        <text x="24" y="36" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#47615a">Fixes validated</text>
+        <text x="24" y="120" font-family="Georgia, 'Times New Roman', serif" font-size="62" fill="#1d2d32">2</text>
+      </g>
+      <g transform="translate(644,0)" filter="url(#shadow)">
+        <rect x="0" y="0" width="292" height="182" rx="18" fill="#f5f7f6" stroke="#d9e4df"/>
+        <text x="24" y="36" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#47615a">Fixes resolved</text>
+        <text x="24" y="120" font-family="Georgia, 'Times New Roman', serif" font-size="62" fill="#1d2d32">2</text>
+      </g>
+    </g>
+  </g>
+</svg>
