@@ -1,6 +1,6 @@
 # NEMESIS
 
-**Find unsupported AI claims, review defensive fixes, and keep sensitive inference on your own machine.**
+**An agentic AI security platform for stress-testing LLM behavior, exposing unsupported claims, and strengthening defenses—with the freedom to run inference locally.**
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![React 19](https://img.shields.io/badge/React-19-61DAFB.svg?logo=react&logoColor=black)](https://react.dev/)
@@ -8,30 +8,31 @@
 
 ## What is NEMESIS?
 
-NEMESIS is an experimental AI security and LLMOps platform for exercising AI-agent workflows, surfacing failures such as unsupported success claims, and reviewing proposed defensive instructions against supplied evidence and regression cases.
+NEMESIS is an agentic AI security and LLMOps platform built to make language-model behavior more observable, testable, and resilient. It orchestrates AI agents to inspect failure evidence, propose defensive instruction improvements, and independently adjudicate those proposals against supplied regression cases.
 
-The React dashboard presents pipeline metrics, scenario traces, claim differences, audit records, and a streamed multi-agent review. A FastAPI service coordinates pipeline execution and routes inference to Groq or a loopback-only Ollama service. NEMESIS is a hackathon and development project; it is not a certified security product or an autonomous production patching system.
+By connecting model-driven red teaming with claim-level evidence and privacy-aware inference, NEMESIS gives teams a practical way to examine not only what an AI system answered, but whether the answer was supported by the observed execution. Its multi-agent workflow keeps the Fixer and Red Team roles distinct, while human-readable traces make the review process easier to inspect.
 
 ## Key features
 
-- **Multi-agent review:** A Fixer proposes a defensive instruction; a separate Red Team adjudicator evaluates it against the selected scenario's evidence and supplied cases. This is model-based review, not test execution or proof of correctness.
-- **Provider separation:** Configure distinct Groq models for the Fixer and Red Team to reduce single-model bias.
-- **Local-first inference switch:** Select Ollama for local inference. Local mode requires a loopback Ollama endpoint and does not fall back to Groq.
-- **Claim-level compliance records:** Turn recorded unsupported claims into timestamped, exportable audit entries with the isolated claim and divergence reason.
-- **Visual hallucination diffing:** Compare the original output with the verified response and the expected ground truth.
-- **Evidence-grounded diagnostics:** Ask questions about a run; diagnostic answers must cite values in the JSON supplied with the request.
-- **Pipeline modes:** Run with Groq (`live_llm`), local Ollama (`local_llm`), or deterministic offline execution (`mock_llm`).
+- **Agentic red-team workflow:** Coordinate a Fixer agent and a distinct Red Team adjudicator. The Fixer proposes an improved instruction; the Red Team evaluates it against the selected failure evidence and supplied regression cases.
+- **Multi-model adjudication:** Route the Fixer and Red Team to separately configured Groq models, adding a second model perspective to defensive review.
+- **Local-first LLM inference:** Switch to Ollama to keep inference on the local machine. Local mode requires a loopback endpoint and does not fall back to Groq.
+- **Claim-level AI accountability:** Generate timestamped, exportable audit entries that isolate unsupported claims and describe their divergence from expected behavior.
+- **Hallucination and claim diffing:** Inspect the original AI output beside the corrected response and ground truth to see precisely where a claim overreached.
+- **Evidence-grounded LLM diagnostics:** Ask questions about pipeline behavior and receive answers that cite matching values from the supplied execution evidence.
+- **Flexible inference modes:** Use Groq (`live_llm`), Ollama (`local_llm`), or deterministic offline execution (`mock_llm`).
+
+Agent review is model adjudication against supplied cases—not execution of tests, proof of correctness, or automatic modification of a deployed agent.
 
 ## Tech stack
 
-| Layer | Technology |
+| Capability | Technology |
 | --- | --- |
-| Frontend | React 19, Vite, Tailwind CSS 4 |
-| Backend API | Python 3.11+, FastAPI, Uvicorn |
-| Pipeline and validation | Python, Pydantic, LiteLLM |
-| Persistence | SQLite via SQLAlchemy |
-| Cloud inference | Groq API |
-| Local inference | Ollama |
+| Agent and LLM orchestration | Python, LiteLLM, Pydantic |
+| Multi-model adjudication | Groq API with separately configured Fixer and Red Team models |
+| Private local inference | Ollama, restricted to a loopback endpoint |
+| AI security evidence and run records | FastAPI, SQLite, SQLAlchemy |
+| Interactive review workbench | React, Vite, Tailwind CSS |
 
 ## Quick start
 
@@ -126,28 +127,22 @@ Invoke-RestMethod -Method Post `
   -Body '{"mode":"mock_llm","n_scenarios":1}'
 ```
 
-## System architecture
+## Agentic AI architecture
 
-1. The **React dashboard** submits pipeline requests and displays run metrics, selected scenarios, review events, and audit data.
-2. The **FastAPI backend** validates requests, runs the NEMESIS pipeline, stores run/scenario data in SQLite, and exposes the dashboard API.
-3. The backend's **inference boundary** routes model requests to Groq or to the configured loopback-only Ollama endpoint. Mock mode provides a deterministic path for offline development.
-4. For an Agent Boardroom review, the **Fixer** proposes an instruction and the **Red Team adjudicator** reviews it against only the selected failure evidence and supplied regression cases. The streamed results return to the dashboard.
-5. The diagnostic endpoint receives the current run/scenario JSON from the browser and validates citations against that payload. It does not have server-side filesystem access.
+1. NEMESIS runs an AI-agent scenario through a configured inference provider and captures its observable outputs and verification evidence.
+2. The orchestration layer identifies failure signals—including unsupported success claims—and makes the corresponding run and scenario evidence available for review.
+3. In the Agent Boardroom, the **Fixer** proposes a focused instruction improvement. A distinct **Red Team adjudicator** reviews the proposal against the supplied evidence and regression cases, with each turn streamed to the review interface.
+4. The **evidence and audit layer** validates diagnostic citations against the supplied run data and turns recorded claim divergences into exportable compliance entries.
+5. The **inference gateway** routes requests either to configured Groq models or to local Ollama. Local mode is restricted to loopback and has no cloud fallback; mock mode supports deterministic runs without model calls.
 
-## Hackathon impact
+The React interface is the inspection surface for this workflow; the core value is the agentic evaluation loop, grounded evidence, and choice of inference boundary.
 
-AI agents can confidently report success even when their tools or the world state show an operation is still pending or has failed. NEMESIS makes these discrepancies visible, helps teams review a narrowly scoped defensive instruction, and records unsupported claims for inspection. Its Local option demonstrates a privacy-oriented workflow by keeping inference on the Ollama service running on the backend machine instead of routing those requests to Groq.
+## Why NEMESIS matters
 
-These capabilities are intended to support development and evaluation. Before using NEMESIS with sensitive data or exposing it outside a trusted development environment, add appropriate authentication, authorization, rate limiting, secure transport, monitoring, and operational review.
+An AI agent can confidently announce success even when its tools show that an operation is still pending or has failed. NEMESIS brings that reliability gap into view: it captures the execution evidence, highlights the unsupported claim, invites a Fixer to propose a targeted defense, and asks a separate Red Team model to challenge that proposal against the supplied cases.
+
+With a local Ollama route alongside cloud inference, NEMESIS also makes privacy a first-class part of the LLM workflow. The result is a compelling foundation for teams that want clearer AI failure analysis, more rigorous instruction review, and greater control over where model inference runs.
 
 ## Project status
 
-NEMESIS is an actively developed hackathon project. There is currently no declared open-source license or configured CI workflow; the badges above intentionally reflect that status. Until a license is added, reuse and redistribution permissions are not explicitly granted.
-
-## Contributing
-
-Issues and pull requests are welcome. For a proposed change, include the problem it addresses, steps to reproduce or verify it, and any relevant test coverage. Do not submit API keys, `.env` files, database files, or other secrets.
-
-## Security
-
-Please do not include credentials, personal data, or confidential prompts in public issues. Do not expose the development API to an untrusted network. See [docs/diagnostic-and-healing.md](./docs/diagnostic-and-healing.md) for provider behavior and API details.
+NEMESIS brings together agentic orchestration, multi-model evaluation, auditable evidence, and privacy-aware inference in one cohesive AI security workbench. The project does not currently declare an open-source license or configure a CI workflow.
