@@ -42,7 +42,8 @@ NEMESIS moves beyond single-model self-healing by introducing a zero-trust **Age
 An embedded, context-aware diagnostic terminal designed to instantly debug pipeline failures without requiring manual JSON log parsing.
 * **Strict Evidence Grounding:** The assistant is explicitly restricted to answer queries based *only* on the current run's execution evidence. It will refuse to hallucinate answers if the supplied logs lack cited evidence.
 * **One-Click Querying:** Use pre-configured quick prompts like "Explain the root cause", "Show supporting evidence", or "How was this fixed?" to instantly surface actionable insights.
-* **Live Run Evidence Tracking:** A dedicated side-panel maps the assistant's citations directly to the pipeline status, isolated scenarios, and original vs. fixed verification states. *
+* **Live Run Evidence Tracking:** A dedicated side-panel maps the assistant's citations directly to the pipeline status, isolated scenarios, and original vs. fixed verification states.
+*
 ## Tech stack
 
 | Capability | Technology |
