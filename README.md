@@ -38,7 +38,9 @@ Agent review is model adjudication against supplied cases—not execution of tes
 | Private local inference | Ollama, restricted to a loopback endpoint |
 | AI security evidence and run records | FastAPI, SQLite, SQLAlchemy |
 | Interactive review workbench | React, Vite, Tailwind CSS |
-
+<p align="center">
+  <img src="assets/Screenshot 2026-10-24 145507.png" alt="NEMESIS dashboard preview" width="1200" />
+</p>
 ## Quick start
 
 ### Prerequisites
