@@ -27,7 +27,7 @@ By connecting model-driven red teaming with claim-level evidence and privacy-awa
 
 Agent review is model adjudication against supplied cases—not execution of tests, proof of correctness, or automatic modification of a deployed agent.
 <p align="center">
-  <img src="assets/" alt="NEMESIS dashboard preview" width="1200" />
+  <img src="assets/Screenshot 2026-10-24 145958.png" alt="NEMESIS dashboard preview" width="1200" />
 </p>
 ## Tech stack
 
