@@ -7,6 +7,9 @@
 [![FastAPI](https://img.shields.io/badge/API-FastAPI-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 
 ## What is NEMESIS?
+<p align="center">
+  <img src="assets/nemesis-dashboard-preview.svg" alt="NEMESIS dashboard preview" width="1200" />
+</p>
 
 NEMESIS is an agentic AI security and LLMOps platform built to make language-model behavior more observable, testable, and resilient. It orchestrates AI agents to inspect failure evidence, propose defensive instruction improvements, and independently adjudicate those proposals against supplied regression cases.
 
