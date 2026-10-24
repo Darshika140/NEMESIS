@@ -2,8 +2,6 @@
 
 **Find unsupported AI claims, review defensive fixes, and keep sensitive inference on your own machine.**
 
-[![License: not specified](https://img.shields.io/badge/license-not%20specified-lightgrey.svg)](#project-status)
-[![CI: not configured](https://img.shields.io/badge/CI-not%20configured-lightgrey.svg)](#project-status)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![React 19](https://img.shields.io/badge/React-19-61DAFB.svg?logo=react&logoColor=black)](https://react.dev/)
 [![FastAPI](https://img.shields.io/badge/API-FastAPI-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
