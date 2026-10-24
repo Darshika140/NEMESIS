@@ -29,6 +29,21 @@ Agent review is model adjudication against supplied cases—not execution of tes
 <p align="center">
   <img src="assets/Screenshot 2026-10-24 145958.png" alt="NEMESIS dashboard preview" width="1200" />
 </p>
+
+## 🧠 Core Features: Verification & Diagnostic Intelligence
+
+### 🏛️ Multi-Agent Adjudication (Agent Boardroom)
+NEMESIS moves beyond single-model self-healing by introducing a zero-trust **Agent Boardroom**. Proposed fixes are rigorously evaluated through an automated adversarial debate before deployment.
+* **Red Team Adjudicator (Groq Critic Model):** Evaluates candidate instructions against supplied regression cases. It mathematically ensures the new prompt prevents false success claims (e.g., restricting an agent from confirming a booking if the status is pending or missing).
+* **Fixer Defense (Groq Fixer Model):** Generates strict, explicit behavioral guardrails to patch the vulnerability.
+* **Interactive Approval Loop:** Developers can inspect the exact debate rounds, review the new candidate instructions, and manually initiate the agent review process.
+
+### 💬 Evidence Intelligence (Diagnostic Assistant)
+An embedded, context-aware diagnostic terminal designed to instantly debug pipeline failures without requiring manual JSON log parsing.
+* **Strict Evidence Grounding:** The assistant is explicitly restricted to answer queries based *only* on the current run's execution evidence. It will refuse to hallucinate answers if the supplied logs lack cited evidence.
+* **One-Click Querying:** Use pre-configured quick prompts like "Explain the root cause", "Show supporting evidence", or "How was this fixed?" to instantly surface actionable insights.
+* **Live Run Evidence Tracking:** A dedicated side-panel maps the assistant's citations directly to the pipeline status, isolated scenarios, and original vs. fixed verification states.
+* 
 ## Tech stack
 
 | Capability | Technology |
